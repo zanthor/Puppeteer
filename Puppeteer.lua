@@ -213,7 +213,7 @@ local function initUnitFrames()
     UnitFrameGroups["Target"].ShowCondition = function(self)
         local friendly = not UnitCanAttack("player", "target")
         return (PTOptions.AlwaysShowTargetFrame or (UnitExists("target") and 
-            (friendly and PTOptions.ShowTargets.Friendly) or (not friendly and PTOptions.ShowTargets.Hostile))) 
+            ((friendly and PTOptions.ShowTargets.Friendly) or (not friendly and PTOptions.ShowTargets.Hostile)))) 
             and baseCondition(self)
     end
 

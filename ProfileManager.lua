@@ -12,7 +12,7 @@ Profiles = {}
 
 DefaultProfileOrder = {
     "Default", "Default (Short Bar)", "Small", "Very Small", "Very Small (Horizontal)", "Long", "Long (Small)", 
-    "Long (Integrated)", "Legacy"
+    "Long (Integrated)", "Long Target", "Legacy"
 }
 DefaultProfileOrder = util.ToSet(DefaultProfileOrder, true)
 
@@ -142,6 +142,16 @@ function InitializeDefaultProfiles()
         profile.RoleIcon.OffsetX = -5
 
         profile.PVPIcon.OffsetY = -5
+    end
+
+    do
+        local profile = CreateProfile("Long Target", "Long (Integrated)")
+
+        profile.HealthBarColor = "Green To Red"
+        profile.HealthBarStyle = "Blizzard Smooth"
+        
+        profile.RangeText.FontSize = 18
+        profile.RangeText.AlignmentV = "CENTER"
     end
 
     do
