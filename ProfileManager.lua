@@ -261,8 +261,87 @@ function InitializeDefaultProfiles()
     do
         local profile = CreateProfile("Very Small (Horizontal)", "Very Small")
         profile.Orientation = "Horizontal"
+		profile.Width = 75
     end
+	
+	do 
+		local profile = CreateProfile("Less Small (Horizontal)", "Very Small")
+		profile.Orientation = "Horizontal"
+		profile.PowerBarHeight = 8
+		profile.VerticalSpacing = 3
+		profile.HorizontalSpacing = 3
+		profile.Width = 65
+		profile.HealthBarHeight = 25
+		profile.HealthBarColor = "Class"
+		profile.HealthBarStyle = "Blizzard Smooth"
+		profile.PowerBarStyle = "Blizzard Smooth"
+		profile.ShowDebuffColorsOn = "Hidden"
+		profile.AuraTracker.Anchor = "Power Bar"
+		profile.AuraTracker.OffsetY = 3
+		
+		profile.NameText.FontSize = 9
+        profile.NameText.AlignmentH = "LEFT"
+        profile.NameText.AlignmentV = "TOP"
+        profile.NameText.PaddingV = 1
+        profile.NameText.OffsetX = 6
+		profile.NameText.OffsetY = 2
+        profile.NameText.MaxWidth = 54
+		profile.NameText.Color = "Default"
+		
+		local healthTexts = profile.HealthTexts
+        healthTexts.Normal.FontSize = 9
+        healthTexts.Normal.AlignmentH = "CENTER"
+        healthTexts.Normal.AlignmentV = "CENTER"
+        healthTexts.Normal.OffsetY = -2
+        healthTexts.WithMissing.FontSize = 9
+        healthTexts.WithMissing.AlignmentH = "LEFT"
+        healthTexts.WithMissing.AlignmentV = "CENTER"
+        healthTexts.WithMissing.OffsetY = -2
+        healthTexts.Missing.FontSize = 9
+        healthTexts.Missing.AlignmentH = "RIGHT"
+        healthTexts.Missing.AlignmentV = "CENTER"
+        healthTexts.Missing.OffsetY = -2
+	end
+	
+	do 
+		local profile = CreateProfile("Less Small (Vertical)", "Less Small (Horizontal)")
+		profile.Orientation = "Vertical"
+		profile.MaxUnitsInAxis = 4
 
+		profile.PowerBarHeight = 8
+		profile.VerticalSpacing = 3
+		profile.HorizontalSpacing = 3
+		profile.Width = 65
+		profile.HealthBarHeight = 25
+		profile.HealthBarColor = "Class"
+		profile.HealthBarStyle = "Blizzard Smooth"
+		profile.PowerBarStyle = "Blizzard Smooth"
+		profile.ShowDebuffColorsOn = "Hidden"
+		
+		profile.NameText.FontSize = 9
+        profile.NameText.AlignmentH = "LEFT"
+        profile.NameText.AlignmentV = "TOP"
+        profile.NameText.PaddingV = 1
+        profile.NameText.OffsetX = 6
+		profile.NameText.OffsetY = 2
+        profile.NameText.MaxWidth = 54
+		profile.NameText.Color = "Default"
+		
+		local healthTexts = profile.HealthTexts
+        healthTexts.Normal.FontSize = 9
+        healthTexts.Normal.AlignmentH = "CENTER"
+        healthTexts.Normal.AlignmentV = "CENTER"
+        healthTexts.Normal.OffsetY = -2
+        healthTexts.WithMissing.FontSize = 9
+        healthTexts.WithMissing.AlignmentH = "LEFT"
+        healthTexts.WithMissing.AlignmentV = "CENTER"
+        healthTexts.WithMissing.OffsetY = -2
+        healthTexts.Missing.FontSize = 9
+        healthTexts.Missing.AlignmentH = "RIGHT"
+        healthTexts.Missing.AlignmentV = "CENTER"
+        healthTexts.Missing.OffsetY = -2
+	end
+		
     do
         local profile = CreateProfile("Default", "Base")
 
